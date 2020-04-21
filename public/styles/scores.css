@@ -1,0 +1,77 @@
+body {
+    background-color: rgb(210, 232, 241);
+}
+
+.nav {
+    overflow: hidden;
+    background-color: #00BFFF;
+    border-radius: 5px;
+}
+
+.nav a {
+    float: left;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav a:hover {
+    color: blue;
+    background-color: white;
+}
+
+.nav a.logout {
+    float: right;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#scores {
+    margin: auto;
+    background-color: rgb(145, 238, 199);
+    max-width: 800px;
+    height: 450px;
+    border-radius: 20px;
+    overflow-y: scroll;
+}
+
+#score_table {
+    width: 100%;
+    margin: 20px auto;
+    table-layout: auto;
+}
+
+.rank, .user, .moves, .time {
+    color: rgb(0, 0, 187);
+    padding-left: 5px;
+    padding-right: 10px;
+    max-width: 70px;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    background-color: #00FFFF;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+    display: inline-block;
+    border-radius: 5px;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #008B8B;
+}
+
+#buttons {
+    margin: auto;
+    text-align: center;
+}

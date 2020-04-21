@@ -1,0 +1,135 @@
+body {
+    background-color: rgb(210, 232, 241);
+}
+
+.nav {
+    overflow: hidden;
+    background-color: #00BFFF;
+    border-radius: 5px;
+}
+
+.nav a {
+    float: left;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav a:hover {
+    color: #00BFFF;
+    background-color: white;
+}
+
+.nav a.logout, a.exit {
+    float: right;
+}
+
+#main {
+    margin: auto;
+    margin-top: 15px;
+    background-color: #00BFFF;
+    border-radius: 10px;
+    display: flex;
+}
+
+.info{
+    font-size: 50px;
+    text-align: center;
+    margin: 15px;
+}
+
+.card-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 100px;
+    height: 150px;
+    margin: 10px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.face {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+
+.back {
+    background-color: grey;
+}
+
+.back.effect:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+#start {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    font-size: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(59, 59, 59);
+    display: block;
+}
+
+#start:hover {
+    cursor: pointer;
+    color: black;
+}
+
+#victory {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    font-size: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(135, 223, 250);
+    border-radius: 5px;
+    width: 50%;
+    height: 75%;
+    display: none;
+}
+
+#victory button {
+    margin: 10px;
+    font-size: 40px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(195, 253, 255);
+}
+
+#victory button:hover {
+    cursor: pointer;
+    background-color: rgb(68, 246, 255);
+}

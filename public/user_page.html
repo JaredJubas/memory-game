@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ 	<meta charset="utf-8">
+    <title>User</title>
+    <link rel="stylesheet" type="text/css" href="styles/user_page.css">
+ </head>
+ <body>
+    <div class="nav">
+        <a class="logout" href="index.html">Log Out</a>
+    </div>
+
+    <h1 id="userName"></h1>
+
+    <a class="changePassword" href="password_change.html">Change Password</a>
+
+    <div class="game">
+       
+       <p>The goal of this game is to find all the card pairs. <br>Try and do it in as few moves as possible.</p>
+
+       <button onclick="location.href = 'scores.html';" id="scores">View Highscores</button>
+
+       <button onclick="location.href = 'game.html';" id="play">Play Game</button>
+
+    </div>
+
+    <div class="background">
+       <img src="images/game_pic.png"> 
+    </div>
+
+    <script type="text/javascript" src="js/user.js"></script>
+ </body>
+</html>
