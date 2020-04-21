@@ -43,7 +43,7 @@ function createRow(i, allScores) {
 	const cell3 = new_row.insertCell(2);
 	const cell4 = new_row.insertCell(3);
 
-	const rank = document.createTextNode(i.toString());
+	const rank = document.createTextNode((i++).toString());
 	const user = document.createTextNode(allScores[i].username);
     const moves = document.createTextNode(allScores[i].moves);
     const time = document.createTextNode(allScores[i].minutes.toString() + ':' + allScores[i].seconds.toString());

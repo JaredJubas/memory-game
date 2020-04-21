@@ -36,7 +36,7 @@ h1, h2 {
     margin: auto;
     background-color: rgb(145, 238, 199);
     max-width: 800px;
-    height: 450px;
+    height: 425px;
     border-radius: 20px;
     overflow-y: scroll;
 }
@@ -47,11 +47,8 @@ h1, h2 {
     table-layout: auto;
 }
 
-.rank, .user, .moves, .time {
-    color: rgb(0, 0, 187);
-    padding-left: 5px;
-    padding-right: 10px;
-    max-width: 70px;
+th, td {
+    text-align: center;
 }
 
 button {
