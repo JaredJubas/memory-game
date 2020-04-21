@@ -106,7 +106,9 @@ function recordScore() {
     request.open('POST', url, true)
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
-    const data = JSON.stringify({"username":username,"moves":num_moves,minutes:"minutes",seconds:"seconds"})
+    const username = sessionStorage.getItem('userName');
+
+    const data = JSON.stringify({"username":username,"moves":num_moves,"minutes":minutes,"seconds":seconds})
     request.send(data)
 }
 
