@@ -102,7 +102,7 @@ function victory() {
 function recordScore() {
     // Add the new score to the database
     const request = new XMLHttpRequest()
-    const url = '/record'
+    const url = '/score'
     request.open('POST', url, true)
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
