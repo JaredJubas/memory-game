@@ -27,7 +27,7 @@ function signIn(e) {
                 const body = JSON.parse(request.response)
                 sessionStorage.setItem('userName', username);
                 sessionStorage.setItem('admin', body.admin)
-                location.href = "user.html"
+                location.href = "user_page.html"
             } else {
                 console.error(request.statusText)
                 document.getElementById("error").style.display = "block"

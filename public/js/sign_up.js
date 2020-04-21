@@ -39,7 +39,7 @@ function createAccount(e) {
         // Check if request succeeded
         if (request.status === 200) {
             sessionStorage.setItem('userName', username);
-            location.href = "user.html"
+            location.href = "user_page.html"
         } else if (request.status === 400) {
             log(request.response)
             document.getElementById("error").innerHTML = "User already exists."
