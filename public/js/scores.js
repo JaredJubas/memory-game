@@ -54,8 +54,14 @@ function createRow(i, allScores) {
 	// Create text nodes for each cell
 	const rank = document.createTextNode(cur_rank.toString());
 	const user = document.createTextNode(allScores[i].username);
-    const moves = document.createTextNode(allScores[i].moves);
-    const time = document.createTextNode(allScores[i].minutes.toString() + ':' + allScores[i].seconds.toString());
+	const moves = document.createTextNode(allScores[i].moves);
+	
+	// Add a leading 0 if seconds is only 1 digit
+	let seconds = allScores[i].seconds;
+	if (seconds < 10) {
+		seconds = '0' + seconds.toString();
+	}
+    const time = document.createTextNode(allScores[i].minutes.toString() + ':' + seconds);
 
 	// Add the text nodes to each cell
 	cell1.appendChild(rank);
