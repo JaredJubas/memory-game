@@ -37,17 +37,22 @@ function createScoreTable() {
 }
 
 function createRow(i, allScores) {
-    const new_row = document.createElement("tr");
-    
-    const cell1 = document.createTextNode(toString(i));
-    const cell2 = document.createTextNode(allScores[i].username);
-    const cell3 = document.createTextNode(allScores[i].moves);
-    const cell4 = document.createTextNode(toString(allScores[i].minutes) + toString(allScores[i].seconds));
+	const new_row = document.createElement("tr");
+	
+	const cell1 = new_row.insertCell(0);
+	const cell2 = new_row.insertCell(1);
+	const cell3 = new_row.insertCell(2);
+	const cell4 = new_row.insertCell(3);
 
-	new_row.appendChild(cell1);
-	new_row.appendChild(cell2);
-    new_row.appendChild(cell3);
-    new_row.appendChild(cell4);
+	const rank = document.createTextNode(toString(i));
+	const user = document.createTextNode(allScores[i].username);
+    const moves = document.createTextNode(allScores[i].moves);
+    const time = document.createTextNode(toString(allScores[i].minutes) + toString(allScores[i].seconds));
+
+	cell1.appendChild(rank);
+	cell2.appendChild(user);
+	cell3.appendChild(moves);
+	cell4.appendChild(time);
 
 	return new_row
 }
