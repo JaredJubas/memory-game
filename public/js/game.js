@@ -130,6 +130,8 @@ function restart(e) {
     minutes = 0;
     seconds = 0;
     time.innerHTML = minutes.toString() + ":" + seconds.toString();
+    num_matched = 0;
+    flipped = [];
 
     // Delay the cards being shuffled to allow for them to finish being flipped
     setTimeout(function() {
