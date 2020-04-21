@@ -27,8 +27,8 @@ function createScoreTable() {
 	.then((allScores) => {
 		// Display all scores
 		console.log(allScores);
-		for (let i = 0; i < allScores.length; i++) {
-			const new_row = createRow(i, allScores)
+		for (let i = 0; i < allScores.score.length; i++) {
+			const new_row = createRow(i, allScores.score)
 			scores.appendChild(new_row)
 		}
 	}).catch((error) => {
@@ -44,10 +44,10 @@ function createRow(i, allScores) {
 	const cell3 = new_row.insertCell(2);
 	const cell4 = new_row.insertCell(3);
 
-	const rank = document.createTextNode(toString(i));
+	const rank = document.createTextNode(i.toString());
 	const user = document.createTextNode(allScores[i].username);
     const moves = document.createTextNode(allScores[i].moves);
-    const time = document.createTextNode(toString(allScores[i].minutes) + toString(allScores[i].seconds));
+    const time = document.createTextNode(allScores[i].minutes.toString() + ':' + allScores[i].seconds.toString());
 
 	cell1.appendChild(rank);
 	cell2.appendChild(user);
