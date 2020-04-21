@@ -25,6 +25,10 @@ function createScoreTable() {
 		}
 	})
 	.then((allScores) => {
+		// Sort scores by number of moves
+		allScores.scores.sort((score1, score2) => {
+			return score1.moves - score2.moves;
+		})
 		// Display all scores
 		for (let i = 0; i < allScores.scores.length; i++) {
 			const new_row = createRow(i, allScores.scores)
