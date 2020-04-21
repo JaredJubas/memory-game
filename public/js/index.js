@@ -1,5 +1,6 @@
 'use strict';
 
+// Everything needed from the HTML
 const logIn = document.querySelector('#signIn')
 
 // Automatically resets current session

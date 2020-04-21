@@ -1,6 +1,7 @@
 'use strict';
 const log = console.log; 
 
+// Everything needed from the HTML
 const create = document.querySelector('#createAccount')
 
 // Add submit event listener
@@ -38,6 +39,7 @@ function createAccount(e) {
     request.onload = function() {
         // Check if request succeeded
         if (request.status === 200) {
+            // Store the user as currently logged in
             sessionStorage.setItem('userName', username);
             location.href = "user_page.html"
         } else if (request.status === 400) {

@@ -1,10 +1,13 @@
 'use strict';
 
+// Everything needed from the HTML
 const back = document.querySelector('#back')
 const scores = document.querySelector('#score_table')
 
+// Add all scores to the table
 createScoreTable();
 
+// Back button event listener
 back.addEventListener('click', backToUser)
 
 function backToUser(e) {

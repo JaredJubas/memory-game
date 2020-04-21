@@ -2,6 +2,7 @@
 
 // Everything needed from the HTML
 const cards = Array.from(document.getElementsByClassName('card'));
+const backs = Array.from(document.getElementsByClassName('back'));
 const time = document.getElementById('current');
 const total_moves = document.getElementById('num');
 const start = document.getElementById('start');
@@ -144,6 +145,12 @@ function play(e) {
     if (e) {e.preventDefault()}
 
     start.style.display = "none";
+    // Enable card hover effect if not already enabled
+    backs.forEach(back => {
+        if (back.classList.length === 2) {
+            back.classList.toggle('effect');
+        }
+    })
     shuffle();
 
     startTime();
@@ -151,12 +158,6 @@ function play(e) {
         card.addEventListener('click', function(){
             flipCard(card);
         })
-    })
-    const backs = Array.from(document.getElementsByClassName('back'));
-    backs.forEach(back => {
-        if (back.classList.length === 2) {
-            back.classList.toggle('effect');
-        }
     })
 
     // Game ready

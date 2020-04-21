@@ -1,6 +1,7 @@
 'use strict';
 const log = console.log; 
 
+// Everything needed from the HTML
 const changePass = document.querySelector('#changePassword')
 
 // Add submit event listener
@@ -44,6 +45,7 @@ function changePassword(e) {
         }
     }
 
+    // Username is the user already logged in
     const username = sessionStorage.getItem('userName')
     const data = JSON.stringify({"username": username, "password": pass})
     request.send(data)

@@ -37,6 +37,7 @@ app.post('/signup', (req, res) => {
 		password: req.body.password,
 		admin: req.body.admin
 	})
+	// Make sure username is unique
 	User.findOne({username: req.body.username})
 	.then((userExists) => {
 		if (userExists) {
@@ -63,6 +64,7 @@ app.post('/login', (req, res) => {
 	const username = req.body.username
 	const password = req.body.password
 
+	// Make sure user exists
 	User.findOne({username: username})
 	.then((user) => {
 		if (!user) {
@@ -93,6 +95,7 @@ app.patch('/pass', (req, res) => {
 	bcrypt.genSalt(10, (err, salt) => {
 		bcrypt.hash(password, salt, (err, hash) => {
 			update.password = hash;
+			// Find correct user and update
 			User.findOneAndUpdate({username: username}, {$set: update}, {new: true})
 			.then((user) => {
 				if (!user) {
