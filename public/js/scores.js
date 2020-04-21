@@ -38,16 +38,22 @@ function createScoreTable() {
 function createRow(i, allScores) {
 	const new_row = document.createElement("tr");
 	
+	// Create a new cell for each column
 	const cell1 = new_row.insertCell(0);
 	const cell2 = new_row.insertCell(1);
 	const cell3 = new_row.insertCell(2);
 	const cell4 = new_row.insertCell(3);
 
-	const rank = document.createTextNode((i++).toString());
+	// Rank of user
+	const cur_rank = i + 1;
+
+	// Create text nodes for each cell
+	const rank = document.createTextNode(cur_rank.toString());
 	const user = document.createTextNode(allScores[i].username);
     const moves = document.createTextNode(allScores[i].moves);
     const time = document.createTextNode(allScores[i].minutes.toString() + ':' + allScores[i].seconds.toString());
 
+	// Add the text nodes to each cell
 	cell1.appendChild(rank);
 	cell2.appendChild(user);
 	cell3.appendChild(moves);
