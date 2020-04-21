@@ -46,7 +46,7 @@ a.changePassword:hover {
 
 .game {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -77,9 +77,9 @@ button:hover {
 
 .background img {
     height: 30%;
-    width: 30%;
+    width: 20%;
     position: absolute;
-    top: 65%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, 0);
 }
