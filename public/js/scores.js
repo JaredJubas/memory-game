@@ -26,9 +26,8 @@ function createScoreTable() {
 	})
 	.then((allScores) => {
 		// Display all scores
-		console.log(allScores);
-		for (let i = 0; i < allScores.score.length; i++) {
-			const new_row = createRow(i, allScores.score)
+		for (let i = 0; i < allScores.scores.length; i++) {
+			const new_row = createRow(i, allScores.scores)
 			scores.appendChild(new_row)
 		}
 	}).catch((error) => {
